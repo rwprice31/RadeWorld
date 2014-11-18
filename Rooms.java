@@ -4,14 +4,14 @@ public class Rooms {
 
 	private String description;
 	private String roomName;
-	private boolean cleared;
-	private int roomNum;
+	private String exits;
+	private int roomNumber;
 	
-	public Rooms (String roomName, int roomNum, String description, boolean cleared) {
+	public Rooms (String roomName, int roomNum, String description, String exits) {
 		this.setDescription(description);
 		this.setRoomName(roomName);
-		this.setRoomNum(roomNum);
-		this.setCleared(cleared);
+		this.setRoomNumber(roomNum);
+		this.setExits(exits);
 		
 	}
 
@@ -23,6 +23,14 @@ public class Rooms {
 		this.description = description;
 	}
 
+	public String getExits() {
+		return exits;
+	}
+
+	public void setExits(String exits) {
+		this.exits = exits;
+	}
+
 	public String getRoomName() {
 		return roomName;
 	}
@@ -31,21 +39,11 @@ public class Rooms {
 		this.roomName = roomName;
 	}
 
-	public int getRoomNum() {
-		return roomNum;
+	public int getRoomNumber() {
+		return roomNumber;
 	}
 
-	public void setRoomNum(int roomNum) {
-		this.roomNum = roomNum;
+	public void setRoomNumber(int roomNumber) {
+		this.roomNumber = roomNumber;
 	}
-
-	public boolean isCleared() {
-		return cleared;
-	}
-
-	public void setCleared(boolean cleared) {
-		this.cleared = cleared;
-	}
-	
-	
 }
