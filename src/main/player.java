@@ -1,19 +1,41 @@
 package main;
 
-public class player extends characters {
-	private double encounterRate;
+public class player   {
+	private boolean dead;
+	private String choice;
+	private String heroName;
 
-	public player(boolean dead, double encounterRate, String name) {
-		super(dead, encounterRate, name);
-		// TODO Auto-generated constructor stub
+	public player(boolean dead, String choice, String heroName){	
+		this.setCharacterName(heroName);
+		this.setChoice(choice);
+		this.setDead(dead);
 	}
-
-	public double getEncouterRate() {
-		return encounterRate;
+	
+	
+	
+	public String  getCharacterName(){
+		return heroName;
 	}
-
-	public void setEcounterRate(double encounterRate) {
-		this.encounterRate = encounterRate;
+	
+	
+	public void setCharacterName(String heroName){
+		this.heroName = heroName;
 	}
+	
+	
+	
+	public boolean getDead(){
+		return dead;
+	}
+	
+	public void setDead(boolean dead){
+		this.dead = dead;
+	}
+public String getChoice(){
+	return choice;
+}
 
+public void setChoice(String choice){
+	this.choice = choice;
+}
 }
